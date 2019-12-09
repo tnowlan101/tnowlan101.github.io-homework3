@@ -25,19 +25,19 @@ function getPasswordOptions() {
     return;
   }
   var hasSpecialCharacters = confirm(
-    "Click OK to confirm including special characters."
+    "Click OK to confirm including special characters, This is optional but you must choose at least one."
   );
 
   var hasNumericCharacters = confirm(
-    "Click OK to confirm including numeric characters."
+    "Click OK to confirm including numeric characters, This is optional but you must choose at least one."
   );
 
   var hasLowerCasedCharacters = confirm(
-    "Click OK to confirm including lowercase characters."
+    "Click OK to confirm including lowercase characters, This is optional but you must choose at least one"
   );
 
   var hasUpperCasedCharacters = confirm(
-    "Click OK to confirm including uppercase characters."
+    "Click OK to confirm including uppercase characters This is optional but you must choose at least one."
   );
 
   if (
@@ -121,12 +121,12 @@ function copyToClipboard() {
   document.execCommand("copy");
 
   alert(
-    "Your password " + passwordText.value + " was copied to your clipboard."
+    "Your new random password " + passwordText.value + " was copied to your clipboard."
   );
 }
 
-// Add event listener to generate button
+// generating button
 generateBtn.addEventListener("click", writePassword);
 
-// Add event listener to copy button
+// copy button
 copyBtn.addEventListener("click", copyToClipboard);
